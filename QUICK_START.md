@@ -1,4 +1,4 @@
-# Guía de Inicio Rápido - Migración Moodle
+# Guía de Inicio Rápido - Migración Moodle 3.10 → 4.5 LTS
 
 ## Uso del Script Automático
 
@@ -59,7 +59,7 @@ El script te pedirá:
 
 Al finalizar, tendrás:
 
-- **Moodle 4.4.10+ LTS** ejecutándose
+- **Moodle 4.5 LTS** ejecutándose
 - **PHP 8.2.29** (seguro hasta 2026)
 - **Acceso web:** http://localhost:8200
 - **Login:** `sosadmin` / `Admin123!`
@@ -90,7 +90,7 @@ cd web && docker-compose down
 
 1. **Acceso:** http://localhost:8200
 2. **Login:** `sosadmin` / `Admin123!`
-3. **Verificar versión:** Pie de página debe mostrar "4.4.10+"
+3. **Verificar versión:** Pie de página debe mostrar "4.5"
 4. **Verificar PHP:** Administración del sitio > Servidor > Entorno
 5. **Verificar cron:** Administración del sitio > Servidor > Tareas programadas
 
