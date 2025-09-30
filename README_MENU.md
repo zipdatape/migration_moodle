@@ -2,14 +2,14 @@
 
 ## Descripción
 
-El **Moodle Migration Manager** es un menú interactivo que facilita la migración de Moodle de versiones antiguas a 4.4 LTS de manera segura y controlada.
+El **Moodle Migration Manager** es un menú interactivo que facilita la migración de Moodle de versiones antiguas a 4.5 LTS de manera segura y controlada.
 
 ## Características
 
 - **Análisis automático** de backups de Moodle
 - **Detección de versión** actual y recomendación de migración
 - **Configuración interactiva** de rutas y parámetros
-- **Migración progresiva** con actualización de PHP
+- **Migración progresiva** con actualización de PHP (3.10→3.11→4.1→4.4→4.5 LTS)
 - **Monitoreo en tiempo real** del estado de servicios
 - **Logs detallados** de todas las operaciones
 - **Limpieza automática** del entorno
@@ -77,6 +77,7 @@ sudo ./moodle_migration_manager.sh
   - Migración 3.10 → 3.11 (PHP 7.4)
   - Migración 3.11 → 4.1 LTS (PHP 8.0)
   - Migración 4.1 → 4.4 LTS (PHP 8.2)
+  - Migración 4.4 → 4.5 LTS (PHP 8.2)
 
 #### Paso 4: Verificar Estado
 - Selecciona opción **4**
@@ -143,7 +144,7 @@ sudo ./moodle_migration_manager.sh
 # El sistema ejecutará automáticamente la migración completa
 
 # 5. Verificar estado (opción 4)
-# Resultado: Moodle 4.4.10+ LTS ejecutándose
+# Resultado: Moodle 4.5 LTS ejecutándose
 ```
 
 ## Requisitos
@@ -224,4 +225,4 @@ Si encuentras problemas:
 - **Espacio:** Asegúrate de tener suficiente espacio libre
 - **Red:** El sistema crea una red Docker llamada `moodle_net`
 - **Permisos:** Debe ejecutarse como root para acceder a Docker
-- **Versiones:** Soporta migración desde Moodle 3.10 hasta 4.4 LTS
+- **Versiones:** Soporta migración desde Moodle 3.10 hasta 4.5 LTS
