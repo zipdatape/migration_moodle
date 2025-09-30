@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Moodle Migration Manager - Menú Interactivo
-# Autor: Asistente IA
 # Fecha: $(date +%Y-%m-%d)
 
 set -e
