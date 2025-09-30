@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Script de Migración Automática Moodle 3.10 → 4.4 LTS
-# Autor: Asistente IA
+# Script de Migración Automática Moodle 3.10 → 4.5 LTS
 # Fecha: $(date +%Y-%m-%d)
 
 set -e  # Salir en caso de error
@@ -424,6 +423,7 @@ log "Iniciando migración progresiva de Moodle"
 MOODLE_311_URL="https://github.com/moodle/moodle/archive/refs/heads/MOODLE_311_STABLE.tar.gz"
 MOODLE_401_URL="https://github.com/moodle/moodle/archive/refs/heads/MOODLE_401_STABLE.tar.gz"
 MOODLE_404_URL="https://github.com/moodle/moodle/archive/refs/heads/MOODLE_404_STABLE.tar.gz"
+MOODLE_405_URL="https://github.com/moodle/moodle/archive/refs/heads/MOODLE_405_STABLE.tar.gz"
 
 # Función para backup
 backup_before_upgrade() {
@@ -513,6 +513,10 @@ upgrade_moodle "4.1" "$MOODLE_401_URL" "8.0"
 log "=== ETAPA 3: Moodle 4.1 → 4.4 LTS (PHP 8.2) ==="
 upgrade_moodle "4.4" "$MOODLE_404_URL" "8.2"
 
+# 4. Moodle 4.4 → 4.5 LTS (PHP 8.2)
+log "=== ETAPA 4: Moodle 4.4 → 4.5 LTS (PHP 8.2) ==="
+upgrade_moodle "4.5" "$MOODLE_405_URL" "8.2"
+
 # =============================================================================
 # CONFIGURACIÓN FINAL
 # =============================================================================
@@ -563,4 +567,4 @@ echo "4. Navegar por el tablero y cursos"
 echo "5. Verificar cron en Administración del sitio > Servidor > Tareas programadas"
 echo
 
-log "Migración completada. ¡Disfruta tu nuevo Moodle 4.4 LTS!"
+log "Migración completada. ¡Disfruta tu nuevo Moodle 4.5 LTS!"
