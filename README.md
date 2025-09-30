@@ -1,12 +1,12 @@
-# Migración Moodle 3.10 → 4.4 LTS
+# Migración Moodle 3.10 → 4.5 LTS
 
 ## Resumen del Proceso
 
-Esta documentación describe la migración exitosa de Moodle 3.10 a 4.4 LTS con actualización de PHP de 7.4 a 8.2, realizada en un entorno Docker.
+Esta documentación describe la migración exitosa de Moodle 3.10 a 4.5 LTS con actualización de PHP de 7.4 a 8.2, realizada en un entorno Docker.
 
 ## Arquitectura Final
 
-- **Moodle 4.4.10+ LTS** (Build: 20250926)
+- **Moodle 4.5 LTS** (Build: 20241007)
 - **PHP 8.2.29** (soporte hasta diciembre 2026)
 - **MariaDB 10.6** (con parámetros optimizados)
 - **Docker Compose** (servicios web y base de datos)
@@ -41,6 +41,7 @@ Esta documentación describe la migración exitosa de Moodle 3.10 a 4.4 LTS con 
 - **Moodle 3.10** → **3.11** (PHP 7.4)
 - **Moodle 3.11** → **4.1 LTS** (PHP 8.0) 
 - **Moodle 4.1** → **4.4 LTS** (PHP 8.2)
+- **Moodle 4.4** → **4.5 LTS** (PHP 8.2)
 
 #### 1.1 Creación de la Estructura Docker
 
@@ -350,6 +351,7 @@ docker exec moodle_staging_web bash -c "cd /var/www/html && php admin/cli/cron.p
 - **Moodle 3.11:** https://github.com/moodle/moodle/archive/refs/heads/MOODLE_311_STABLE.tar.gz
 - **Moodle 4.1 LTS:** https://github.com/moodle/moodle/archive/refs/heads/MOODLE_401_STABLE.tar.gz
 - **Moodle 4.4 LTS:** https://github.com/moodle/moodle/archive/refs/heads/MOODLE_404_STABLE.tar.gz
+- **Moodle 4.5 LTS:** https://github.com/moodle/moodle/archive/refs/heads/MOODLE_405_STABLE.tar.gz
 
 ## Comandos Docker Útiles
 
@@ -381,7 +383,7 @@ docker compose -f services/docker-compose.db.yml down
 
 ## Resultado
 
-- ✅ **Moodle 4.4.10+ LTS** (versión estable)
+- ✅ **Moodle 4.5 LTS** (versión estable, soporte hasta octubre 2027)
 - ✅ **PHP 8.2.29** (soporte hasta diciembre 2026)
 - ✅ **Base de datos migrada** (sin pérdida de datos)
 - ✅ **Funcionalidades preservadas**
