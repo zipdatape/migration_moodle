@@ -133,11 +133,14 @@ analyze_moodle_backup() {
         
         # Determinar versión objetivo
         if [[ "$VERSION_NUM" -lt 2021051700 ]]; then
-            TARGET_VERSION="4.4 LTS"
-            echo -e "${YELLOW}Recomendación: Migrar a Moodle 4.4 LTS${NC}"
+            TARGET_VERSION="4.5 LTS"
+            echo -e "${YELLOW}Recomendación: Migrar a Moodle 4.5 LTS${NC}"
         elif [[ "$VERSION_NUM" -lt 2022112800 ]]; then
-            TARGET_VERSION="4.4 LTS"
-            echo -e "${YELLOW}Recomendación: Migrar a Moodle 4.4 LTS${NC}"
+            TARGET_VERSION="4.5 LTS"
+            echo -e "${YELLOW}Recomendación: Migrar a Moodle 4.5 LTS${NC}"
+        elif [[ "$VERSION_NUM" -lt 2024042200 ]]; then
+            TARGET_VERSION="4.5 LTS"
+            echo -e "${YELLOW}Recomendación: Migrar a Moodle 4.5 LTS${NC}"
         else
             echo -e "${GREEN}Versión actual es reciente${NC}"
         fi
